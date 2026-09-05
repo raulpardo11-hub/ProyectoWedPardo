@@ -1,13 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raúl Eduardo Pardo Fajardo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+  :root{
+    --ink:#16283B;
+    --paper:#EFF1EC;
+    --teal:#2F6F63;
+    --amber:#C97D2E;
+    --line:#D3D6CE;
+    --white:#FCFBF9;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.15;
+  }
+
+  a{ color:var(--teal); }
+
+  .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* HERO */
+  header.hero{
+    background:var(--ink);
+    color:var(--white);
+    padding:90px 0 70px;
+  }
+  header.hero .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:40px;
+    flex-wrap:wrap;
+  }
+  header.hero h1{
+    font-size:clamp(2.4rem, 5vw, 3.6rem);
+    max-width:520px;
+  }
+  header.hero .role{
+    color:var(--amber);
+    font-size:1.15rem;
+    margin-top:10px;
+    font-weight:500;
+  }
+  header.hero .stat{
+    text-align:right;
+    border-left:2px solid rgba(255,255,255,.2);
+    padding-left:24px;
+  }
+  header.hero .stat .num{
+    font-family:'Fraunces', serif;
+    font-size:2.6rem;
+    color:var(--amber);
+  }
+  header.hero .stat .label{
+    font-size:.9rem;
+    color:rgba(255,255,255,.7);
+    max-width:180px;
+  }
+
+  /* SECTIONS */
+  section{ padding:64px 0; }
+  section h2{
+    font-size:1.9rem;
+    margin-bottom:24px;
+  }
+  section + section{
+    border-top:1px solid var(--line);
+  }
+
+  .about p{ max-width:640px; font-size:1.05rem; }
+
+  /* FOCUS AREAS */
+  .focus-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:0;
+    border-top:1px solid var(--line);
+    margin-top:12px;
+  }
+  .focus-item{
+    padding:22px 20px;
+    border-bottom:1px solid var(--line);
+    border-right:1px solid var(--line);
+  }
+  .focus-item:nth-child(odd){ border-left:1px solid var(--line); }
+  .focus-item h3{
+    font-size:1.05rem;
+    color:var(--teal);
+    margin-bottom:8px;
+  }
+  .focus-item p{ font-size:.95rem; color:#3a4a52; }
+
+  /* EXPERIENCE */
+  .exp-item{
+    display:flex;
+    gap:24px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .exp-item:last-child{ border-bottom:none; }
+  .exp-year{
+    font-family:'Fraunces', serif;
+    color:var(--amber);
+    min-width:110px;
+    font-size:1rem;
+  }
+  .exp-body h3{ font-size:1.1rem; }
+  .exp-body p{ font-size:.95rem; color:#3a4a52; margin-top:4px; }
+
+  /* CONTACT */
+  .contact{
+    background:var(--ink);
+    color:var(--white);
+  }
+  .contact h2{ color:var(--white); }
+  .contact a.email{
+    display:inline-block;
+    margin-top:16px;
+    color:var(--amber);
+    font-size:1.2rem;
+    text-decoration:none;
+    border-bottom:2px solid var(--amber);
+    padding-bottom:2px;
+  }
+  .contact a.email:hover{ opacity:.85; }
+
+  footer{
+    text-align:center;
+    padding:28px 0;
+    font-size:.85rem;
+    color:#6b7a72;
+  }
+
+  a:focus-visible, button:focus-visible{
+    outline:3px solid var(--amber);
+    outline-offset:2px;
+  }
+
+  @media (max-width:600px){
+    header.hero .wrap{ flex-direction:column; align-items:flex-start; }
+    header.hero .stat{ border-left:none; padding-left:0; text-align:left; }
+  }
+</style>
 </head>
 <body>
-    <h1>Hola, este es mi proyecto</h1>
-    
+
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Raúl Eduardo Pardo Fajardo</h1>
+        <p class="role">Senior Implementation Consultant · Software para el sector salud</p>
+      </div>
+      <div class="stat">
+        <div class="num">7+</div>
+        <div class="label">años implementando soluciones HIS / ERP</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="wrap">
+      <h2>Sobre mí</h2>
+      <p>
+        Trabajo implementando y dando soporte a sistemas HIS y ERP para instituciones
+        de salud, acompañando a los equipos clínicos y administrativos en la adopción
+        de tecnología que protege la información de los pacientes sin sacrificar
+        agilidad operativa. Este espacio reúne mi perfil profesional y los proyectos
+        en los que estoy trabajando actualmente.
+      </p>
+    </div>
+  </section>
+
+  <section class="focus">
+    <div class="wrap">
+      <h2>Áreas de enfoque</h2>
+      <div class="focus-list">
+        <div class="focus-item">
+          <h3>Implementación ERP</h3>
+          <p>Configuración y puesta en marcha de módulos financieros y operativos para instituciones de salud.</p>
+        </div>
+        <div class="focus-item">
+          <h3>Aseguramiento de calidad</h3>
+          <p>Pruebas funcionales y validación de procesos críticos antes de salir a producción.</p>
+        </div>
+        <div class="focus-item">
+          <h3>Seguridad de la información</h3>
+          <p>Buenas prácticas de autenticación y cifrado aplicadas a datos clínicos sensibles.</p>
+        </div>
+        <div class="focus-item">
+          <h3>Acompañamiento a usuarios</h3>
+          <p>Capacitación y soporte a equipos clínicos y administrativos durante la adopción del sistema.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience">
+    <div class="wrap">
+      <h2>Trayectoria</h2>
+      <div class="exp-item">
+        <div class="exp-year">Actual</div>
+        <div class="exp-body">
+          <h3>Senior Implementation Consultant</h3>
+          <p>ERP Implementation & Quality Assurance en una compañía de software para el sector salud.</p>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-year">Anterior</div>
+        <div class="exp-body">
+          <h3>Fábrica de Software</h3>
+          <p>Diseño y desarrollo de funcionalidades para plataformas HIS/ERP.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap">
+      <h2>Hablemos</h2>
+      <p>¿Tienes un proyecto de implementación o quieres conversar sobre tecnología en salud?</p>
+      <a class="email" href="mailto:tu-correo@ejemplo.com">tu-correo@ejemplo.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">Hecho con Visual Studio Code · Publicado en GitHub Pages</div>
+  </footer>
+
 </body>
 </html>
 
